@@ -1,0 +1,22 @@
+{
+  "name": "Test",
+  "title": "Test",
+  "author": "Test GmbH",
+  "description": "Source code for Test frontend.",
+  "version": "0.1.0",
+  "homepage": "http://Test.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datamint/frontend"
+  },
+  "engines": {
+    "node": "~0.6.10 || 0.8 || 0.9"
+  },
+  "dependencies": {
+    "grunt-contrib-less": "= 0.3.0",
+    "grunt-contrib-requirejs": "= 0.3.0",
+    "grunt-contrib-clean": "= 0.3.0",
+    "grunt-contrib-copy": "= 0.3.0",
+    "grunt-contrib-watch": "= 0.1.4"
+  }
+}
