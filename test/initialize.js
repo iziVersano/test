@@ -25,10 +25,12 @@ jasmineEnv.specFilter = function(spec) {
 
 // Tests
 require([
-    '../test/specs/mediatorSpec',
-    '../test/specs/utilsSpec',
-    '../test/specs/widgets/FieldEditor/subwidgets/NumberGrouping/models/RangeSpec',
-    '../test/specs/widgets/FieldEditor/subwidgets/NumberGrouping/collections/GroupsSpec'
+      '../test/specs/Channels',
+         'lib/mods'
+    // '../test/specs/mediatorSpec',
+    // '../test/specs/utilsSpec',
+    // '../test/specs/widgets/FieldEditor/subwidgets/NumberGrouping/models/RangeSpec',
+    // '../test/specs/widgets/FieldEditor/subwidgets/NumberGrouping/collections/GroupsSpec'
 ], function () {
     jasmineEnv.execute();
 });

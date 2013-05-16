@@ -13,7 +13,7 @@ define([
     'use strict';
     return Backbone.Collection.extend({
        currentArr : [],
-        //url: '/report',
+        url: '/',
        // model: ChannelModel,
         // comparator: function(column) {
         //     return column.get('columnName');
