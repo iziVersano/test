@@ -46,7 +46,7 @@ define([
         ajaxURL  += "?&callback=?";
         ajaxURL  += "&_method=" + methodMap[method];
         ajaxURL  += "&start=" + 1367320200;
-         ajaxURL += "&limit=" + model.brodcasts;   
+        ajaxURL += "&limit=" + model.brodcasts;   
          var postData={};
         }
         else{

@@ -48,9 +48,9 @@ define([
         },
 
         index: function () {
-            user.authentication(function () {
+           // user.authentication(function () {
                 user.router.navigate('home', { trigger: true });
-            });
+           // });
         },
        
         epg: function () {

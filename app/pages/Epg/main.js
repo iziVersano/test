@@ -40,7 +40,6 @@ define([
             this.$el.addClass('loading');
             this.setViews({
                 '.container-widget-Channels' : new DashboardChannelstWidget({widget: this})
-
             });
         },    
         afterRender:function(){
@@ -71,7 +70,7 @@ define([
                   var windowHeight;
                   var reportsListWidth;
                   var mainHeight;
-                  var tollBarHight = $('#subpart_head').height();
+                  var tollBarHight = $('.headr').height();
                   windowHeight = $(window).height();
                   if (windowHeight < 500) {
                       windowHeight = 500;
@@ -79,7 +78,6 @@ define([
                   mainHeight = windowHeight;
                   mainHeight -= $('#header').outerHeight(true);
                   mainHeight = mainHeight - tollBarHight;
-                  //mainHeight -= (parseInt(this.$('.main .content').css('padding-top'),10) + parseInt(this.$('.main .content').css('padding-bottom'),10));
                   this.$('.page-Helpwrapper').css('height', mainHeight);
         }
 
