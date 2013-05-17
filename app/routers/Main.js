@@ -49,7 +49,7 @@ define([
 
         index: function () {
            // user.authentication(function () {
-                user.router.navigate('home', { trigger: true });
+                user.router.navigate('epg', { trigger: true });
            // });
         },
        

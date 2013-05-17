@@ -17,41 +17,30 @@ define([
     // New sync
     Backbone.emulateHTTP = false;
     Backbone.emulateJSON = false;
+
+    function getRootUrl(url) {
+      return url.toString().replace(/^(.*\/\/[^\/?#]*).*$/,"$1");
+    }
+
     Backbone.sync = function (method, model, options) {
         
         var ajaxURL;
-        var methodMap = {
-            'create': 'POST',
-            'update': 'PUT',
-            'delete': 'DELETE',
-            'read':   'GET'
-        };
-        var payload =  JSON.stringify(model.toJSON());
-        if(payload.length > 20000 && (methodMap[method] == 'POST' || methodMap[method] == 'PUT' || methodMap[method] == 'DELETE')){
-            ajaxURL = settings.apiBaseURL + '/'+methodMap[method].toLowerCase();
-            var AJAXtype = 'POST';
-            var jsonType = 'json';
-            var flag = false;
-        }
-        else{
-            ajaxURL = settings.apiBaseURL + '/__';
-            var AJAXtype = 'GET';
-            var jsonType = 'jsonp';
-            var flag = true;
-            var payload = encodeURIComponent(payload);
-        }
+       
+        //check if we are in the same origin if we are we will use empty callback and return json 
+        //if not we will use jsonp with a callback.
+        var callback = (window.location.origin  ==  getRootUrl(settings.apiBaseURL)); 
 
-        ajaxURL += (_.isFunction(model.url) ? model.url() : model.url) + '/';
-        if(flag){
-        ajaxURL  += "?&callback=?";
-        ajaxURL  += "&_method=" + methodMap[method];
+        ajaxURL = settings.apiBaseURL;
+        var AJAXtype = 'GET';
+        var jsonType = callback ? 'json' : 'jsonp';
+
+        ajaxURL +=  model.url;
+      
+        ajaxURL  += "&callback=";
         ajaxURL  += "&start=" + 1367320200;
-        ajaxURL += "&limit=" + model.brodcasts;   
-         var postData={};
-        }
-        else{
-            var postData = {_payload:payload};
-        }
+        ajaxURL  += "&limit=" + model.brodcasts;   
+        var postData={};
+      
         return $.ajax({
             url: ajaxURL,
             type: AJAXtype,

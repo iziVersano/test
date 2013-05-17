@@ -21,6 +21,7 @@ define([
        //override parse due to json format. point to "data"
         page: 6,
         brodcasts: 1,
+        callback:true,
         response : null,
         // parse: function(response) {s
         //     this.response = response.data;
