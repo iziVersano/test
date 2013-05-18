@@ -35,8 +35,7 @@ define([
         var jsonType = callback ? 'json' : 'jsonp';
 
         ajaxURL +=  model.url;
-      
-        ajaxURL  += "&callback=";
+        ajaxURL += "?&callback=?";
         ajaxURL  += "&start=" + 1367320200;
         ajaxURL  += "&limit=" + model.brodcasts;   
         var postData={};
