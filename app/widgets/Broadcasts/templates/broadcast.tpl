@@ -13,4 +13,5 @@
 		<div class="avatar"><img src="" ></div>
 		<div class="avatar"><img src="" ></div>
 	</div>
+
 </div>

@@ -32,7 +32,7 @@ define([
         },
          beforeRender: function () {
             this.setViews({
-                '.broadcasts': new BroadcastsView({ collection: this.broadcasts})
+                '.broadcasts': new BroadcastsView({model:this.model, collection: this.broadcasts, widget:this.options.widget})
             });
             // this.collection.each(function (broadcast) {
             //     this.insertView(new BroadcastItemView({ model: broadcast }));

@@ -17,6 +17,7 @@ define([
 ) {
     'use strict';
     return Backbone.View.extend({
+        tagName: 'li',
         className: 'tablecontainerrow',
         template: channelTemplate,
         initialize: function () {
@@ -30,13 +31,15 @@ define([
             };
         },
         beforeRender: function () {
+            this.nextButton = this.$('.next');
+            this.prevButton = this.$('.prev');
              this.setViews({
-            '.container-widget-broadcasts'  : new BroadcastsWidget({ brodcasts:this.collection ,collection: this.options.broadcasts, widget: this })
+            '.container-widget-broadcasts'  : new BroadcastsWidget({model:this.model, brodcasts:this.collection ,collection: this.options.broadcasts, widget: this })
             });
         },
 
         afterRender: function () {
-     
+            
         }
      });
 });

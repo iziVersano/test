@@ -17,6 +17,7 @@ define([
     'use strict';
     return Backbone.View.extend({
         //template: listTemplate,
+        tagName: 'ul',
         className: 'tablecontainer',
         serialize: function () {
             return {

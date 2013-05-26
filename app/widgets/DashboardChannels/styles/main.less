@@ -38,16 +38,17 @@
                        width:100%;
                        border-top:1px solid black;
                          .tablecontainerrow{
-
+                              position: relative;
                               height: 115px;
                               margin-bottom: 4px;
                               clear: both;
                               overflow: hidden;
+                              padding-left: 25px;
                               border:0px solid black;
 
                               .channel{
-                                width: 8%;
-                                height: 100%;
+                               
+                               
                                 float:left;
                                 background-image: linear-gradient(right , #014669 0%, #46BDF0 59%);
                                 background-image: -o-linear-gradient(right , #014669 0%, #46BDF0 59%);
@@ -62,12 +63,106 @@
                                   color-stop(0, #014669),
                                   color-stop(0.99, #46BDF0)
                                 );
+
+
+                                height: 135px;
+                                width: 98px;
+                                max-width: 118px;
+                                vertical-align: middle;
+                                text-align: center;
+                                background-repeat: repeat-y;
+                               
+                              
+                                -webkit-border-top-right-radius: 5px;
+                                -webkit-border-bottom-right-radius: 5px;
+                                -moz-border-radius-topright: 5px;
+                                -moz-border-radius-bottomright: 5px;
+                                border-top-right-radius: 5px;
+                                border-bottom-right-radius: 5px;
+                                -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+                                -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+                                box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+                                overflow: hidden;
+                                position: relative;
+                                display: table;
+                                -webkit-touch-callout: none;
+                                -webkit-user-select: none;
+                                -khtml-user-select: none;
+                                -moz-user-select: none;
+                                -ms-user-select: none;
+                                user-select: none;
                               } 
+                              .button-broadcast.next {
+                                height: 130px;
+                                right: 0;
+                                background: #f0f0f0;
+                                background: -moz-linear-gradient(left,#f0f0f0 0%,#ffffff 100%);
+                                background: -webkit-gradient(linear,left top,right top,color-stop(0%,#f0f0f0),color-stop(100%,#ffffff));
+                                background: -webkit-linear-gradient(left,#f0f0f0 0%,#ffffff 100%);
+                                background: -o-linear-gradient(left,#f0f0f0 0%,#ffffff 100%);
+                                background: -ms-linear-gradient(left,#f0f0f0 0%,#ffffff 100%);
+                                background: linear-gradient(left,#f0f0f0 0%,#ffffff 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0',endColorstr='#ffffff',GradientType=1);
+                                -webkit-border-top-right-radius: 2px;
+                                -webkit-border-bottom-right-radius: 2px;
+                                -moz-border-radius-topright: 2px;
+                                -moz-border-radius-bottomright: 2px;
+                                border-top-right-radius: 2px;
+                                border-bottom-right-radius: 2px;
+                                border-left: 1px solid #cfcfcf;
+                                -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+                                -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+                                box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+                              }
+                              .button-broadcast { 
+                                display: block;
+                                width: 25px;
+                                height: 134px;
+                                
+                                position: absolute;
+                                z-index: 2;
+                                cursor: pointer;
+                                line-height: 90px;
+                                vertical-align: middle;
+                              }
+                              .button-broadcast.next span {
+                                  background-image: url('../img/sprite-v.png');
+                                  background-position: -3248px top;
+                              }
+                              .button-broadcast span {
+                                width: 17px;
+                                height: 28px;
+                                display: inline-block;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                margin: -14px 0 0 -8px;
+                              }
+                              .button-broadcast.prev {
+                                background: #eee;
+                                background: -moz-linear-gradient(left,#ffffff 0%,#dddddd 100%);
+                                background: -webkit-gradient(linear,left top,right top,color-stop(0%,#ffffff),color-stop(100%,#dddddd));
+                                background: -webkit-linear-gradient(left,#ffffff 0%,#dddddd 100%);
+                                background: -o-linear-gradient(left,#ffffff 0%,#dddddd 100%);
+                                background: -ms-linear-gradient(left,#ffffff 0%,#dddddd 100%);
+                                background: linear-gradient(left,#ffffff 0%,#dddddd 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#dddddd',GradientType=1);
+                                -webkit-border-top-left-radius: 2px;
+                                -webkit-border-bottom-left-radius: 2px;
+                                -moz-border-radius-topleft: 2px;
+                                -moz-border-radius-bottomleft: 2px;
+                                border-top-left-radius: 2px;
+                                border-bottom-left-radius: 2px;
+                                left: 0;
+                                -webkit-box-shadow: -1px 1px 2px rgba(0,0,0,0.2);
+                                -moz-box-shadow: -1px 1px 2px rgba(0,0,0,0.2);
+                                box-shadow: -1px 1px 2px rgba(0,0,0,0.2);
+                              }
                               .container-widget-broadcasts{
                                 
                                 height: 115px;
                                 //overflow-y: auto;
-                                width: 92%;
+                                width: 88%;
                                 float:left;
                                 background-image: -moz-linear-gradient(top, #ffffff, #D3D3D3);
                                 background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #ffffff), color-stop(1.0, #D3D3D3));
@@ -133,10 +228,10 @@
                                              .right{
                                            
                                               //background: url('/app/images/avatar_inner-glow.png') ; 
-                                              background-repeat: no-repeat;
-                                              width: 100px;
-                                              height: 93px;
-                                              float:left;
+                                               float: left;
+                                               width: 225px;
+                                               padding: 5px 0 5px 15px;
+                                               border-left: 1px solid #eaeaea;
                                               .avatar{
                                                 display: block;
                                                 width: 44px;

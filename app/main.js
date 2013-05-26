@@ -7,7 +7,8 @@
 require.config({
     paths: {
         'text': '../vendor/require.text-2.0.3',
-        'domReady': '../vendor/require.domReady-2.0.1'
+        'domReady': '../vendor/require.domReady-2.0.1',
+        'slidesjs': '../vendor/jquery.slides'
     }
 });
 
