@@ -1,0 +1,74 @@
+.page-Help {
+    height: 100%;
+    overflow: hidden;
+    &.cssgradients h1 { 
+                        background: -moz-linear-gradient(#f5f5f5, #d9d9d9);
+                        background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#d9d9d9));
+                        border: 1px solid #bbb;
+                        -moz-border-radius: 4px 4px 0 0; 
+                        -webkit-border-radius: 4px 4px 0 0;
+                        border-radius: 4px 4px 0 0;
+                        -moz-box-shadow: inset 0 1px 0 #fff; 
+                        -webkit-box-shadow: inset 0 1px 0 #fff;
+                        box-shadow: inset 0 1px 0 #fff;
+                        height: 34px;
+                        width: 198px; }
+
+                        /*** Without CSS3 Gradients ***/
+
+                        &.no-cssgradients h1 { 
+                        background: url("bg.png") 0 0 no-repeat;
+                        height: 36px;
+                        width: 200px; }
+    // .headr {
+    //     font-size: 28pt;
+    //     font-weight: bolder;
+    //     color: whitesmoke;
+    //     width: 100%;
+    //     height: 50px;
+    //     text-align: center;
+    //     vertical-align: middle;
+    //     line-height: 50px;
+    //     background-image: linear-gradient(right , #2d2d31 0%, #3f3f45 59%);
+    //                             background-image: -o-linear-gradient(right , #2d2d31 0%, #3f3f45 59%);
+    //                             background-image: -moz-linear-gradient(right , #2d2d31 0%, #3f3f45 59%);
+    //                             background-image: -webkit-linear-gradient(right , #2d2d31 0%, #3f3f45 59%);
+    //                             background-image: -ms-linear-gradient(right , #2d2d31 0%, #3f3f45 59%);
+    //  }
+    .overlay-loading {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.3) url('../images/loader.gif') no-repeat 50% 50%;
+    }
+  
+    &.loading .overlay-loading {
+        display: block;
+    }
+
+    .page-Helpwrapper {
+        height: 100%;
+        //make it white
+        .mixin-white-JspScrollPane;
+        .page-content{
+         .page-wrapper{
+            width: 80%;
+            margin: 0 auto;
+        //todo fastfix -- where the fuck comes the 10px margin from?
+            
+            .container-widget-channels {
+                //margin: 35px 35px 0px 35px;
+            }
+
+            .container-widget-Questions {
+
+            }
+
+        }
+    }
+}
+}
