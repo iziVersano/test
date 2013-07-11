@@ -36,10 +36,14 @@
             };
         },
         initialize: function () {
+            this.loadedArr =  [];
             _.bindAll(this, 'onFetchSuccess', 'loadResults', 'onFetchReloadSuccess');
+            this.on('onLoadResaults', this.loadResults, this);
+            // Listen for broadcasts requests
+            //mediator.subscribe(this, 'loadResults', this.loadResults, this);
             //this.on('refreshList', this.render, this);
             this.epgChannels = new Channels();
-            this.epgModel = new EpgModel();
+            //this.epgModel = new EpgModel();
             this.epgChannels.fetch({ success: this.onFetchSuccess });
             //this.epgChannels.on("add reset", this.render, this);
             
@@ -60,16 +64,20 @@
         }, 
         //Refetch Backend with new broadcasts
         loadResults: function(){
-           debugger;
-           //this.epgChannels.reset();
+           //debugger;
+           
            //this.remove();
-           if(this.epgChannels.brodcasts < 5) {
-               this.epgChannels.brodcasts += 1; // Load next broadcast 
-               this.epgChannels.fetch( {success: this.onFetchSuccess});
+           
+           if(this.epgChannels.brodcasts < 5 && !this.brodcastsLoaded(this.epgChannels.brodcasts)) {
+               // reset the colletion 
+               this.epgChannels.reset();
+               //go fetch more data
+               this.epgChannels.fetch({success: this.onFetchSuccess});
            } else {
                 this.options.widget.$el.removeClass('loading');
+                //mediator.broadcast('nextResults', this.epgChannels.brodcasts);
+                this.render();
            }
-           
         },
         beforeRender: function () {
                 this.setViews({
@@ -77,16 +85,22 @@
                 });
         },
         afterRender: function () {
-           
+           //mediator.broadcast('nextResults', this.epgChannels.brodcasts);
+
         },
         onFetchSuccess: function () {
+            this.loadedArr.push(this.epgChannels.brodcasts);
             this.options.widget.isLoading = false;
             this.options.widget.$el.removeClass('loading');
             this.render();
         },
 
         onFetchReloadSuccess:function(){
-            this.options.widget.render();
+            //this.options.widget.render();
+        },
+
+        brodcastsLoaded:function(limit){
+            return  jQuery.inArray(limit, this.loadedArr) > -1
         }
     });
 });

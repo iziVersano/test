@@ -4,9 +4,13 @@
  */
 
 define([
-    'lib/settings'
+    'lib/settings',
+    'underscore', 
+    'backbone'
 ], function(
-    settings
+    settings,
+    _,
+    Backbone
 ) {
     'use strict';
     return Backbone.NestedModel.extend({

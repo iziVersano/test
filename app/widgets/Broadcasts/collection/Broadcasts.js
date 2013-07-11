@@ -24,7 +24,7 @@ define([
         // parse: function(response) {
         //     this.response = response.data;
         //     var self = this;
-        //     debugger;
+        //     //debugger;
         //     console.log('parse ###########################################');
         //     var counter = 0;
         //     _.each(response.data, function(model){
@@ -45,7 +45,7 @@ define([
         //   console.log('pages:' + this.page);
         //   var counter = 0;
         //   var self = this;
-        //   debugger;
+        //   //debugger;
         //    _.each(this.response, function(model){
         //               if(counter <= self.page){
         //                 if($.inArray(model, self.currentArr) == -1){

@@ -19,46 +19,47 @@ define([
         //     return column.get('columnName');
         // }
        //override parse due to json format. point to "data"
-        page: 6,
-        brodcasts: 1,
+        page: 4,
+        brodcasts: 1,   
         callback:true,
         response : null,
-        // parse: function(response) {s
-        //     this.response = response.data;
-        //     var self = this;
-            
-        //     console.log('parse ###########################################');
-        //     var counter = 0;
-        //     _.each(response.data, function(model){
-        //               if(counter <= self.page){
-        //                 self.currentArr.push(model);
-        //                 self.push(model);
-        //               }
-        //                counter++;
-        //      });
-        //      //Object.keys(response.data).lengt
-        //      //return models
-          
-        //      //return all channels
-        //      return this.models;
-        // },
-
         parse: function(response) {
             this.response = response.data;
             var self = this;
-            console.log('processing backend data');
+            
+            console.log('parse ###########################################');
+            var counter = 0;
             _.each(response.data, function(model){
-                        var brodcast =  _.last(model.broadcasts);
-                        var brodcastArray = [];
-                        brodcastArray.push(brodcast);
-                        var newModel = {channel:model.channel, broadcasts:brodcastArray};
-                        //Add object as bacbone model.
-                        self.push(newModel);
-              });
-             
+                    // if(counter <= self.page){
+                        self.currentArr.push(model);
+                        self.push(model);
+                     // }
+                      counter++;
+             });
+             //Object.keys(response.data).lengt
+             //return models
+          
              //return all channels
+             
              return this.models;
         },
+
+        // parse: function(response) {
+        //     this.response = response.data;
+        //     var self = this;
+        //     console.log('processing backend data');
+        //     _.each(response.data, function(model){
+        //                 var brodcast =  _.last(model.broadcasts);
+        //                 var brodcastArray = [];
+        //                 brodcastArray.push(brodcast);
+        //                 var newModel = {channel:model.channel, broadcasts:brodcastArray};
+        //                 //Add object as bacbone model.
+        //                 self.push(newModel);
+        //       });
+             
+        //      //return all channels
+        //      return this.models;
+        // },
 
         addResults: function(){
           console.log('pages:' + this.page);

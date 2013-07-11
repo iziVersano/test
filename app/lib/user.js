@@ -5,12 +5,18 @@
 
 define([
     'lib/settings',
-    'lib/mediator'
-    
+    'lib/mediator',
+    'underscore', 
+    'backbone',
+    'backbone.localStorage',
+    'backbone.nested'
 ], function(
     settings,
-    mediator
-    
+    mediator,
+    _, 
+    Backbone,
+    localStorage,
+    nested
 ) {
     'use strict';
     // This is slightly different, as it's our user and applications state,

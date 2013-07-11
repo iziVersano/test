@@ -28,9 +28,9 @@ define([
         },
         beforeRender: function () {
             //this.collection.sort();
-            
+     
             this.collection.each(function (epg) {
-                this.insertView(new AccordionitemView({collection:this.collection , broadcasts: epg.get('broadcasts'), model: epg }));
+                this.insertView(new AccordionitemView({collection:this.collection , broadcasts: epg.get('broadcasts'), model: epg, widget:this.options.widget}));
             }, this);
         }
        

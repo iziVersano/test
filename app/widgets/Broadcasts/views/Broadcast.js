@@ -7,15 +7,18 @@ define([
     'lib/helpers',
     'lib/user',
     'lib/mediator',
-    'text!../templates/broadcast.tpl'
+    'text!../templates/broadcast.tpl',
+    'backbone'
 ], function(
     helpers,
     user,
     mediator,
-    broadcastTemplate
+    broadcastTemplate,
+    Backbone
 ) {
     'use strict';
     return Backbone.View.extend({
+        tagName:'li',
         template: broadcastTemplate,
         className: 'broadcast',
         serialize: function () {
@@ -35,16 +38,16 @@ define([
             
         },
         afterRender: function () {
-            var view = this;
-            var pop = parseFloat( parseFloat(this.popularity));
-             console.log('pop:' + pop)
-            $.fn.stars = function() {
-                return $(this).each(function() {
-                    $(this).html($('<span />').width(Math.max(0, (Math.min(5, pop))) * 46));
-                });
-            }
+            // var view = this;
+            // var pop = parseFloat( parseFloat(this.popularity));
+            //  console.log('pop:' + pop)
+            // $.fn.stars = function() {
+            //     return $(this).each(function() {
+            //         $(this).html($('<span />').width(Math.max(0, (Math.min(5, pop))) * 46));
+            //     });
+            // }
             
-            this.$('span.stars').stars();
+            // this.$('span.stars').stars();
         },
 
         getBroadcastTime: function(){
