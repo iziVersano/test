@@ -1,1 +1,0 @@
-define(["lib/user","lib/mediator","lib/helpers","text!../templates/form.tpl"],function(e,t,n,r){"use strict";return Backbone.View.extend({template:r,serialize:{translations:n.translations()},initialize:function(){},afterRender:function(){}})});

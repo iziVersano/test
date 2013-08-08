@@ -28,7 +28,7 @@ define([
                program:this.model.get('program').title,
                broadcastTime : this.getBroadcastTime()
             };
-        },
+        },  
        
         initialize: function () {
             this.popularity = this.model.get('program').popularity;

@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                 options: {
                     livereload: LIVERELOAD_PORT
                 },
-                files: [
+                files: [ 
                     'app/**/*.js',
                     'app/**/*.less',
                     '<%= yeoman.app %>/*.html',
@@ -55,10 +55,24 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/scripts/templates/*.ejs'
                 ],
                 tasks: ['jst']
+            },
+            css: {
+                files: ['app/**/*.less'],
+                tasks: 'less'
             }
         },
 
-        
+        less: {
+            all: {
+                files: {
+                    'app/styles/app.css': 'app/styles/app.less'
+                },
+                options: {
+                    compress: true
+                }
+            }
+        },
+
         connect: {
             options: {
                 port: 8888,
@@ -378,7 +392,7 @@ module.exports = function (grunt) {
             //'coffee:dist',
             //'createDefaultTemplate',
             //'jst',
-            'build',
+            //'build',
             'connect',
             'open',
             'watch'

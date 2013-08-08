@@ -26,7 +26,6 @@
   limitations under the License.
 */
 (function() {
-
   (function($, window, document) {
     var Plugin, defaults, pluginName;
     pluginName = "slidesjs";

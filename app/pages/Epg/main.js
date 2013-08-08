@@ -40,24 +40,25 @@ define([
             this.$el.addClass('loading');
             this.setViews({
                 '.container-widget-Channels' : new DashboardChannelstWidget({widget: this})
+                //'.filter' : new filterTimelineWidget({widget: this})
             });
         },    
         afterRender:function(){
                    var view = this;
-//                    this.$('.page-Helpwrapper').jScrollPane({ showArrows: true, autoReinitialise: true });
-//                    this.$('.page-Helpwrapper').bind(
-//                        'jsp-scroll-y',
-//                        function(event, scrollPositionY, isAtTop, isAtBottom)
-//                        {
-//                            if(isAtBottom && !view.isLoading) {
-//                               console.log('infi' )
-//                               view.isLoading = true;
-//                               //display waiting gif
-//                               view.$el.addClass('loading');
-// //                              view.views['.container-widget-Channels'].loadResults();
-//                            }
-//                        }
-//                    );
+                   this.$('.page-Helpwrapper').jScrollPane({ showArrows: true, autoReinitialise: true });
+                   this.$('.page-Helpwrapper').bind(
+                       'jsp-scroll-y',
+                       function(event, scrollPositionY, isAtTop, isAtBottom)
+                       {
+                           if(isAtBottom && !view.isLoading) {
+                              console.log('infi' )
+                              view.isLoading = true;
+                              //display waiting gif
+                              view.$el.addClass('loading');
+//                              view.views['.container-widget-Channels'].loadResults();
+                           }
+                       }
+                   );
                    mediator.broadcast('resize');
         },
                /**
