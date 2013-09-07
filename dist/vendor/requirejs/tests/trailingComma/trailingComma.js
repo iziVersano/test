@@ -1,0 +1,1 @@
+require(["a"],function(e){doh.register("trailingComma",[function(t){t.is("a",e.name,"a.name is a")}]),doh.run()});

@@ -1,0 +1,1 @@
+require({baseUrl:"./"},["a"],function(e){e.doSomething(),doh.register("nestedRequire",[function(t){t.is(1,e.counter),t.is("base",e.base.name)}]),doh.run()});

@@ -1,0 +1,1 @@
+require({baseUrl:requirejs.isBrowser?"./":"./universal/"},["spell"],function(e){doh.register("universal",[function(t){t.is("spell",e.name),t.is("newt",e.newtName),t.is("tail",e.tailName),t.is("eye",e.eyeName)}]),doh.run()});

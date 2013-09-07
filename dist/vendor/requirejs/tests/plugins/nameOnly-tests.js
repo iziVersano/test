@@ -1,0 +1,1 @@
+require({baseUrl:requirejs.isBrowser?"./":"./plugins/"},["require","nameOnly!"],function(e,t){doh.register("pluginsNameOnly",[function(e){e.is("nameOnly",t.name)}]),doh.run()});
