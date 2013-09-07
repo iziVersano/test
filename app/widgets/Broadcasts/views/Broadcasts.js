@@ -5,7 +5,7 @@
 
 define([
     'lib/helpers',
-    './broadcast',
+    './Broadcast',
     'lib/mediator',
     'vendor/jquery.slides',
     'text!../templates/broadcastsCarousel.tpl'

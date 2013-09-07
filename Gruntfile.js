@@ -184,7 +184,7 @@ module.exports = function (grunt) {
                 // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
                 options: {
                     // `name` and `out` is set by grunt-usemin
-                    dir: 'dist',
+                   
                     baseUrl: '<%= yeoman.app %>',
                     //optimize: 'none',
                    paths: {
@@ -240,6 +240,7 @@ module.exports = function (grunt) {
                     keepBuildDir: true,
                     inlineText: true,
                     useStrict: true,
+                    dir: 'dist',
                     findNestedDependencies: true,
                     fileExclusionRegExp: /^\./ // This will exlude any dot files, such as .git/, .DS_Store etc.
                     //uglify2: {} // https://github.com/mishoo/UglifyJS2
@@ -426,10 +427,6 @@ module.exports = function (grunt) {
         'rev',
         'usemin'
     ]);
-
-    grunt.registerTask('default', [
-        'jshint'
-       // 'test',
-       // 'build'
-    ]);
+    grunt.registerTask('default', ["requirejs"]);
+   
 };
