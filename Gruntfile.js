@@ -240,7 +240,7 @@ module.exports = function (grunt) {
                     keepBuildDir: true,
                     inlineText: true,
                     useStrict: true,
-                    dir: 'dist',
+                    dir: 'distx',
                     findNestedDependencies: true,
                     fileExclusionRegExp: /^\./ // This will exlude any dot files, such as .git/, .DS_Store etc.
                     //uglify2: {} // https://github.com/mishoo/UglifyJS2
