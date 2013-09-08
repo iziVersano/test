@@ -1,0 +1,1 @@
+require({baseUrl:requirejs.isBrowser?"./":"./plugins/"},["require","earth","prime/earth"],function(e,t,n){doh.register("pluginsSync",[function(e){e.is("a",t.getA().name),e.is("c",t.getC().name),e.is("b",t.getB().name),e.is("aPrime",n.getA().name),e.is("cPrime",n.getC().name),e.is("bPrime",n.getB().name)}]),doh.run()});

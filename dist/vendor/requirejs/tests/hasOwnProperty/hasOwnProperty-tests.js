@@ -1,0 +1,1 @@
+require(["toString","hasOwnProperty","prototype"],function(e,t,n){doh.register("hasOwnPropertyTests",[function(r){r.is("toString",e.name),r.is("hasOwnProperty",t.name),r.is("prototype",n.name)}]),doh.run()});

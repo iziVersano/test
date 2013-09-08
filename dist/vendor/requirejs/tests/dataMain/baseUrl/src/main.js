@@ -1,0 +1,1 @@
+define(["a"],function(e){doh.register("dataMainBaseUrl",[function(t){t.is("a",e.name)}]),doh.run()});

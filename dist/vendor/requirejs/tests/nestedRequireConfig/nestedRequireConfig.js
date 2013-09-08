@@ -1,0 +1,1 @@
+define("components/one/One",["jquery"],function(){return{name:"One"}}),require([],function(){require({paths:{jquery:"http://code.jquery.com/jquery-1.7.2.min"}},["components/one/One"],function(e){doh.register("nestedRequireConfig",[function(t){t.is("One",e.name),t.is(!0,!!jQuery)}]),doh.run()})}),define("nestedRequireConfig",[],function(){});
