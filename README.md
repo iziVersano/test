@@ -95,7 +95,7 @@ grunt build
 * [PhantomJS](http://phantomjs.org/)
 * [Grunt](http://gruntjs.com/)
 * [LESS](http://lesscss.org/)
-* [Jasmine](http://pivotal.github.com/jasmine/)
+* [Jasmine](https://jasmine.github.io/)
 * [Require](http://requirejs.org/)
 * [jQuery](http://jquery.com/)
 * [jQuery UI](http://jqueryui.com/)
